@@ -1,42 +1,59 @@
-# Kent State CAE Web & Analytics Portal
+# Kent State CAE Web & Analytics Portal (Demo)
+
+**This demo website was designed and created by Ethan Boicey as a portfolio project for job application purposes. It is not affiliated with or endorsed by Kent State University. Only hiring staff should review this site.**
+
+---
 
 ## For Hiring Staff / Non-Technical Users
 
 ### What This Project Demonstrates
-- Website design, layout, and content structuring
-- Website maintenance and incremental updates
-- UTM campaign tracking
-- Page-level analytics
-- Dashboard & reporting (weekly/monthly summaries)
+- Modern website design, layout, and content structuring
+- Easy website maintenance and updates
+- UTM campaign tracking for marketing
+- Page-level analytics and reporting
+- Dashboard with weekly/monthly summaries
 - Performance insights (bounce rate, session duration, top pages, traffic sources, devices, etc.)
-- Internal documentation & content workflows
+- Internal documentation and content workflows
 - Demo data population for demonstration
 - Non-technical editing support (content/config/colors/images)
 - Deployable online (Netlify/Vercel)
 
-### Editing Content Instructions
-- All site content is stored in `/content/pages/*.json` files
-- Images are in `/content/images/`
-- Navigation, theme, and analytics config are in `/config/*.json`
-- Edit these files directly in VS Code or any text editor
+### How to Edit Content (No Coding Required)
 
-### Updating Branding/Colors/Logos
-- Update `/config/theme.json` for colors and typography
-- Replace images in `/content/images/` for logos and hero images
+**All content and settings are stored in easy-to-edit files.**
 
-### Accessing Analytics Dashboard
-- Visit `/admin/analytics` in the deployed site
-- View traffic, UTM campaigns, top pages, device breakdown, and more
+#### 1. Change Page Content
+- Go to the `/content/pages/` folder.
+- Open the relevant file (e.g., `programs.json`, `research.json`, `faculty.json`, `labs.json`, `news.json`).
+- Edit text, add new items, or change descriptions directly in the file.
+- Example: To add a new program, add an object to the `"programs"` array in `programs.json`.
 
-### Interpreting Reports
-- Dashboard shows weekly/monthly summaries
-- Export data to CSV
-- Generate formatted monthly report
+#### 2. Change Images (Logo, Hero, etc.)
+- Go to the `/public/` folder.
+- Replace `logo.jpg` or `hero.jpg` with your new image file.
+- Make sure the new file has the same name (or update the reference in the code if you change the filename).
+- You can drag and drop images into this folder using VS Code or your file explorer.
 
-### How UTM Tracking Works
-- UTM parameters (`utm_campaign`, `utm_medium`, `utm_source`) are parsed from URLs
-- Analytics records store UTM data for reporting
-- Use the campaign builder utility to generate UTM URLs
+#### 3. Update Navigation Links
+- Go to `/config/navigation.json`.
+- Edit the `"links"` array to add, remove, or rename navigation items.
+
+#### 4. Change Colors and Typography
+- Go to `/config/theme.json`.
+- Update color codes or font names to change the site’s look and feel.
+- Example: Change the value for `"navy"` to update the main blue color.
+
+#### 5. Edit Analytics/Demo Mode
+- Go to `/config/analytics.json`.
+- Toggle `"demoMode"` to `true` or `false` to enable/disable demo data.
+
+#### 6. Save Changes
+- After editing, save the file. The website will automatically update if running locally or after redeployment.
+
+**No Coding Required:**
+- All edits are made by opening and saving files or uploading images—no programming knowledge needed.
+
+---
 
 ## For Developers
 
@@ -74,46 +91,11 @@
 - JSON records for visits, UTM, devices, sources
 - Exportable to CSV
 
+---
+
 ## Portfolio Artifacts
 - Portfolio write-up, screenshots, talking points, skills mapping (see `/portfolio.md`)
 
 ---
 
-**This project is designed to be credible, academic, and clean—matching Kent State CAE’s standards.**
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**This demo website was designed and created by Ethan Boicey as a portfolio project for job application purposes. It is not affiliated with or endorsed by Kent State University. Only hiring staff should review this site.**

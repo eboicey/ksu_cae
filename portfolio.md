@@ -1,4 +1,8 @@
-# Kent State CAE Web & Analytics Portal Portfolio
+# Kent State CAE Web & Analytics Portal Portfolio (Demo)
+
+**This demo website was designed and created by Ethan Boicey as a portfolio project for job application purposes. It is not affiliated with or endorsed by Kent State University. Only hiring staff should review this site.**
+
+---
 
 ## Project Overview
 A modern, academic web portal and analytics dashboard for Kent State College of Aeronautics and Engineering. Built to demonstrate full-stack, UX/UI, and analytics skills for a student web design and analytics assistant role.
@@ -37,4 +41,4 @@ A modern, academic web portal and analytics dashboard for Kent State College of 
 
 ---
 
-**This project is credible, academic, and ready for review by Kent State CAE.**
+**This demo website was designed and created by Ethan Boicey as a portfolio project for job application purposes. It is not affiliated with or endorsed by Kent State University. Only hiring staff should review this site.**

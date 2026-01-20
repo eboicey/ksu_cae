@@ -5,6 +5,7 @@
     { "name": "Research", "href": "/research" },
     { "name": "Faculty & Staff", "href": "/faculty" },
     { "name": "Labs & Facilities", "href": "/labs" },
-    { "name": "News & Events", "href": "/news" }
+    { "name": "News & Events", "href": "/news" },
+    { "name": "Clubs", "href": "/clubs" }
   ]
 }
