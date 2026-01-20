@@ -1,0 +1,10 @@
+{
+  "links": [
+    { "name": "Home", "href": "/" },
+    { "name": "Programs", "href": "/programs" },
+    { "name": "Research", "href": "/research" },
+    { "name": "Faculty & Staff", "href": "/faculty" },
+    { "name": "Labs & Facilities", "href": "/labs" },
+    { "name": "News & Events", "href": "/news" }
+  ]
+}

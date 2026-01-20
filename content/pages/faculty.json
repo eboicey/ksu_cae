@@ -1,0 +1,8 @@
+{
+  "title": "Faculty & Staff",
+  "description": "Meet our distinguished faculty and staff members.",
+  "faculty": [
+    { "name": "Dr. Jane Smith", "role": "Professor of Aeronautics" },
+    { "name": "Dr. John Doe", "role": "Associate Professor of Mechatronics" }
+  ]
+}

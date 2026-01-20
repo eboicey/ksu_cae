@@ -1,0 +1,13 @@
+{
+  "colors": {
+    "navy": "#0A2342",
+    "blue": "#1D428A",
+    "gold": "#FFD100",
+    "white": "#FFFFFF"
+  },
+  "typography": {
+    "heading": "Merriweather, serif",
+    "body": "Roboto, sans-serif"
+  },
+  "darkMode": true
+}

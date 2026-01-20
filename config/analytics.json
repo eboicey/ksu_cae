@@ -1,0 +1,8 @@
+{
+  "demoMode": true,
+  "utmTracking": true,
+  "reporting": {
+    "weekly": true,
+    "monthly": true
+  }
+}

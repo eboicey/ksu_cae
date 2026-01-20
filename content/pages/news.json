@@ -1,0 +1,12 @@
+{
+  "title": "News & Events",
+  "description": "Stay updated with the latest news and upcoming events at CAE.",
+  "news": [
+    { "headline": "CAE Hosts Annual Aviation Symposium", "date": "2026-02-15" },
+    { "headline": "New Research Grant Awarded for UAS", "date": "2026-01-10" }
+  ],
+  "events": [
+    { "name": "Open House", "date": "2026-03-05" },
+    { "name": "Robotics Workshop", "date": "2026-04-12" }
+  ]
+}

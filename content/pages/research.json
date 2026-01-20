@@ -1,0 +1,8 @@
+{
+  "title": "Research Initiatives",
+  "description": "Discover our cutting-edge research in aeronautics, robotics, and advanced manufacturing.",
+  "projects": [
+    { "name": "Unmanned Aerial Systems", "summary": "Developing autonomous flight technologies." },
+    { "name": "Smart Materials", "summary": "Innovating materials for aerospace applications." }
+  ]
+}

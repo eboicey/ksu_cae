@@ -1,0 +1,9 @@
+{
+  "title": "Academic Programs",
+  "description": "Explore our undergraduate and graduate programs in Aeronautics and Engineering.",
+  "programs": [
+    { "name": "Aeronautical Engineering", "summary": "Design and analyze aircraft and aerospace systems." },
+    { "name": "Mechatronics Engineering", "summary": "Integrate mechanical, electrical, and computer engineering." },
+    { "name": "Aviation Management", "summary": "Prepare for leadership roles in aviation operations." }
+  ]
+}
