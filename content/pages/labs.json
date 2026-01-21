@@ -2,7 +2,109 @@
   "title": "Labs & Facilities",
   "description": "State-of-the-art labs and facilities supporting research and education.",
   "labs": [
-    { "name": "Aerospace Simulation Lab", "summary": "Flight simulation and systems testing." },
-    { "name": "Robotics Lab", "summary": "Hands-on robotics and automation projects." }
+    {
+      "slug": "aerospace-simulation-lab",
+      "title": "Aerospace Simulation Lab",
+      "about": "Provides flight simulation, avionics testing, and systems-in-the-loop experimentation.",
+      "research": ["Flight control validation", "Avionics integration", "Human factors in simulation"],
+      "members": ["Dr. Jane Smith (PI)", "Marcus Wright (Instructor)", "Graduate students"],
+      "facts": ["10-seat simulator", "FAA-grade instrumentation", "24/7 access with training"],
+      "equipment": ["Full-motion simulator", "Data acquisition systems", "Hardware-in-the-loop rigs"],
+      "capabilities": ["Simulated flight scenarios", "Hardware-in-loop testing", "Pilot workload studies"],
+      "email": "aero-sim@ksu.edu",
+      "phone": "(330) 555-0201",
+      "website": "https://ksu.edu/labs/aerospace-simulation"
+    },
+    {
+      "slug": "robotics-lab",
+      "title": "Robotics Lab",
+      "about": "Supports autonomous systems, manipulators, and field robotics experiments.",
+      "research": ["Multi-robot coordination", "Manipulation planning", "Autonomy for field robots"],
+      "members": ["Dr. John Doe (PI)", "Kevin Brown (Research Scientist)", "Undergrad teams"],
+      "facts": ["Large indoor test area", "ROS-based infrastructure"],
+      "equipment": ["Wheeled and legged robots", "LiDAR units", "Embedded compute clusters"],
+      "capabilities": ["Swarm experiments", "Perception & mapping", "Real-time control"],
+      "email": "robotics@ksu.edu",
+      "phone": "(330) 555-0202",
+      "website": "https://ksu.edu/labs/robotics"
+    },
+    {
+      "slug": "aerodynamics-lab",
+      "title": "Aerodynamics Lab",
+      "about": "Wind tunnel facilities and aerodynamic testbeds for model and component testing.",
+      "research": ["Wind tunnel testing", "Aeroelasticity", "Drag reduction studies"],
+      "members": ["David Ortiz (Lab Manager)", "Graduate students"],
+      "facts": ["3 subsonic tunnels", "Variable-speed fans"],
+      "equipment": ["Closed-circuit wind tunnel", "Force balances", "PIV systems"],
+      "capabilities": ["Model testing", "Flow visualization", "Data logging"],
+      "email": "aero-lab@ksu.edu",
+      "phone": "(330) 555-0203",
+      "website": "https://ksu.edu/labs/aerodynamics"
+    },
+    {
+      "slug": "materials-composites-lab",
+      "title": "Materials & Composites Lab",
+      "about": "Characterization and manufacturing of advanced composite materials.",
+      "research": ["Composite layup techniques", "Fatigue testing"],
+      "members": ["Dr. Emily Chen (PI)", "Technicians"],
+      "facts": ["Autoclave access", "Environmental chambers"],
+      "equipment": ["Autoclave", "Universal testing machines", "Microscopy"],
+      "capabilities": ["Material testing", "Prototype layup", "Microstructure analysis"],
+      "email": "materials@ksu.edu",
+      "phone": "(330) 555-0204",
+      "website": "https://ksu.edu/labs/materials"
+    },
+    {
+      "slug": "propulsion-test-stand",
+      "title": "Propulsion Test Stand",
+      "about": "Instrumentation for static engine and rocket motor testing in controlled environments.",
+      "research": ["Thrust measurement", "Combustion diagnostics"],
+      "members": ["Dr. Jane Smith", "Graduate researchers"],
+      "facts": ["Remote operation", "High-speed data capture"],
+      "equipment": ["Thrust stands", "High-speed cameras", "Pressure transducers"],
+      "capabilities": ["Static fire tests", "Performance mapping"],
+      "email": "propulsion@ksu.edu",
+      "phone": "(330) 555-0205",
+      "website": "https://ksu.edu/labs/propulsion"
+    },
+    {
+      "slug": "fabrication-makerspace",
+      "title": "Fabrication & Makerspace",
+      "about": "Student-focused fabrication facility with CNC, 3D printing, and electronics workstations.",
+      "research": ["Rapid prototyping", "Design for manufacturability"],
+      "members": ["Marcus Wright (Instructor)", "Undergrad volunteers"],
+      "facts": ["Open to students", "Shop safety training required"],
+      "equipment": ["CNC mill", "Laser cutter", "3D printers", "Soldering stations"],
+      "capabilities": ["Prototyping", "Small-batch manufacturing", "Electronics assembly"],
+      "email": "makerspace@ksu.edu",
+      "phone": "(330) 555-0206",
+      "website": "https://ksu.edu/labs/makerspace"
+    },
+    {
+      "slug": "avionics-lab",
+      "title": "Avionics & Embedded Systems Lab",
+      "about": "Embedded system integration, flight computers, and avionics testing.",
+      "research": ["Flight computers", "Redundant systems"],
+      "members": ["Kevin Brown", "Undergrad technicians"],
+      "facts": ["Clean bench available", "ESD-safe workstations"],
+      "equipment": ["Oscilloscopes", "Logic analyzers", "Embedded toolchains"],
+      "capabilities": ["Firmware development", "Hardware-in-loop testing"],
+      "email": "avionics@ksu.edu",
+      "phone": "(330) 555-0207",
+      "website": "https://ksu.edu/labs/avionics"
+    },
+    {
+      "slug": "drone-field-testing",
+      "title": "Unmanned Systems Field Testing",
+      "about": "Outdoor testing area and instrumentation for UAV and UGV field trials.",
+      "research": ["UAV autonomy", "Environmental sensing"],
+      "members": ["Dr. John Doe", "Student teams"],
+      "facts": ["Dedicated outdoor range", "FAA coordination"],
+      "equipment": ["UAV platforms", "Telemetry systems", "Ground control stations"],
+      "capabilities": ["Long-range trials", "Sensor integration"],
+      "email": "uav-test@ksu.edu",
+      "phone": "(330) 555-0208",
+      "website": "https://ksu.edu/labs/uav-testing"
+    }
   ]
 }

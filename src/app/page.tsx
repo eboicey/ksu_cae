@@ -1,6 +1,8 @@
 "use client";
-import Navigation from "../components/Navigation";
+// Navigation is rendered in the root layout; don't import here to avoid duplicates
 import { useState, useEffect } from "react";
+import { addSubmission } from "../utils/submissions";
+import Link from "next/link";
 import { FaRocket, FaEnvelope, FaUserGraduate, FaCalendarAlt, FaLink, FaCheckCircle } from "react-icons/fa";
 
 // Countdown clock for Rocket Club launch
@@ -38,35 +40,46 @@ export default function Home() {
 
   async function handleSubmit(e: any) {
     e.preventDefault();
-    // Save submission to localStorage (demo mode)
-    const submissions = JSON.parse(localStorage.getItem("submissions") || "[]");
-    submissions.push({ ...form, timestamp: new Date().toISOString() });
-    localStorage.setItem("submissions", JSON.stringify(submissions));
+    // Save submission (demo mode)
+    addSubmission({ type: "contact", name: form.name, email: form.email, message: form.message });
     setSubmitted(true);
     setForm({ name: "", email: "", message: "" });
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center font-sans bg-linear-to-br from-white to-[#f3f4f6]">
-      <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-12 px-2 sm:px-8 bg-transparent sm:items-start">
-        {/* DEMO disclaimer banner */}
-        <div className="w-full mb-4">
-          <div className="bg-[#FFD100] text-[#0A2342] rounded-xl shadow p-4 text-center font-bold">
-            This demo website was designed and created by Ethan Boicey for job application purposes. It is not affiliated with or endorsed by Kent State University. Only hiring staff should review this site.
+      <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-0 px-2 sm:px-8 bg-transparent sm:items-start">
+        {/* (hero banner removed — using hero image only in navigation) */}
+
+        {/* DEMO disclaimer banner (moved, centered, made highly visible) */}
+        <div className="w-full mt-8 mb-6 flex justify-center">
+          <div role="banner" className="bg-red-600 text-black shadow p-6 text-center font-extrabold border-8 border-black max-w-3xl mx-auto">
+            <span className="text-lg md:text-2xl leading-tight">This demo website was designed and created by Ethan Boicey for job application purposes. It is not affiliated with or endorsed by Kent State University.</span>
           </div>
         </div>
-        {/* Hero image */}
-        <div className="w-full flex justify-center mb-8">
-          <img
-            src="/hero.jpg"
-            alt="Kent State CAE Hero"
-            className="rounded-2xl shadow-xl object-cover w-full max-h-72 border-4 border-[#FFD100]"
-            style={{ objectFit: "cover" }}
-          />
-        </div>
+
+        {/* Hero content card (logo swapped into the right column) */}
+        <header className="w-full mb-8">
+          <div className="bg-white shadow-lg p-6 border border-[#e5e7eb] rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+              <div className="md:col-span-2">
+                <h1 className="text-3xl font-bold text-[#1D428A]">Engineering the Flight of Tomorrow</h1>
+                <p className="mt-2 text-lg text-[#0A2342]">Hands-on programs, multidisciplinary research, and industry partnerships preparing students for aerospace careers.</p>
+                <div className="mt-4 flex gap-3 flex-wrap">
+                  <Link href="/programs" className="inline-flex items-center gap-2 bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#FFD100] hover:text-[#18325a] transition">Programs</Link>
+                  <Link href="/research" className="inline-flex items-center gap-2 bg-[#FFD100] text-[#18325a] font-bold py-2 px-4 rounded-lg shadow hover:bg-[#e5e7eb] transition">Research</Link>
+                  <Link href="/labs" className="inline-flex items-center gap-2 bg-surface text-[#1D428A] font-semibold py-2 px-4 rounded-lg shadow transition">Labs & Facilities</Link>
+                </div>
+              </div>
+              <div className="hidden md:flex md:items-center md:justify-center">
+                <img src="/logo.jpg" alt="Kent State CAE Logo" className="h-28 w-auto max-w-[160px] object-contain rounded-lg border-2 border-[#FFD100] bg-white p-1" />
+              </div>
+            </div>
+          </div>
+        </header>
         {/* Highlights & Announcements */}
         <section className="w-full mb-8">
-          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
+          <div className="bg-white shadow-lg p-6 border border-[#e5e7eb]">
             <h2 className="text-2xl font-bold text-[#1D428A] mb-4 flex items-center gap-2"><FaRocket /> Highlights</h2>
             <ul className="list-none space-y-2">
               <li className="flex items-center gap-2"><FaCheckCircle className="text-[#FFD100]" /> Rocket Club Launch: <Countdown targetDate="2026-02-10T12:00:00" /></li>
@@ -77,39 +90,39 @@ export default function Home() {
           </div>
         </section>
         {/* Quick Links */}
-        <section className="w-full mb-8">
-          <div className="bg-[#f3f4f6] rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
+        <nav aria-label="Quick links" className="w-full mb-8">
+          <div className="bg-[#f3f4f6] shadow-lg p-6 border border-[#e5e7eb] rounded-lg">
             <h2 className="text-xl font-semibold text-[#1D428A] mb-2 flex items-center gap-2"><FaLink /> Quick Links</h2>
-            <div className="flex flex-wrap gap-4">
-              <a href="/programs" className="bg-[#FFD100] text-black font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaUserGraduate /> Programs</a>
-              <a href="/research" className="bg-[#1D428A] text-white font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaRocket /> Research</a>
-              <a href="/faculty" className="bg-[#0A2342] text-white font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaUserGraduate /> Faculty</a>
-              <a href="/labs" className="bg-[#FFD100] text-black font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaRocket /> Labs</a>
-              <a href="/news" className="bg-[#1D428A] text-white font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaCalendarAlt /> News</a>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+              <Link href="/programs" className="block text-center bg-[#18325a] text-white font-bold py-3 px-2 rounded-lg shadow">Programs</Link>
+              <Link href="/research" className="block text-center bg-[#FFD100] text-[#18325a] font-bold py-3 px-2 rounded-lg shadow">Research</Link>
+              <Link href="/labs" className="block text-center bg-white text-[#1D428A] font-semibold py-3 px-2 rounded-lg shadow border">Labs</Link>
+              <Link href="/faculty" className="block text-center bg-white text-[#1D428A] font-semibold py-3 px-2 rounded-lg shadow border">Faculty</Link>
+              <Link href="/news" className="block text-center bg-white text-[#1D428A] font-semibold py-3 px-2 rounded-lg shadow border">News & Events</Link>
             </div>
           </div>
-        </section>
+        </nav>
         {/* Featured Faculty */}
         <section className="w-full mb-8">
-          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
-            <h2 className="text-xl font-semibold text-[#1D428A] mb-2 flex items-center gap-2"><FaUserGraduate /> Featured Faculty</h2>
-            <div className="flex gap-6">
-              <div className="bg-[#f3f4f6] rounded-xl p-4 shadow flex-1">
+          <div className="bg-white shadow-lg p-6 border border-[#e5e7eb] rounded-lg">
+            <h2 className="text-xl font-semibold text-[#1D428A] mb-4 flex items-center gap-2"><FaUserGraduate /> Featured Faculty</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/faculty/jane-smith" className="block bg-[#f3f4f6] p-4 shadow rounded">
                 <div className="font-bold text-[#0A2342]">Dr. Jane Smith</div>
                 <div className="text-[#1D428A]">Professor of Aeronautics</div>
                 <div className="text-xs text-[#6b7280]">Aerospace systems, flight simulation</div>
-              </div>
-              <div className="bg-[#f3f4f6] rounded-xl p-4 shadow flex-1">
+              </Link>
+              <Link href="/faculty/john-doe" className="block bg-[#f3f4f6] p-4 shadow rounded">
                 <div className="font-bold text-[#0A2342]">Dr. John Doe</div>
                 <div className="text-[#1D428A]">Associate Professor of Mechatronics</div>
                 <div className="text-xs text-[#6b7280]">Robotics, automation, smart materials</div>
-              </div>
+              </Link>
             </div>
           </div>
         </section>
         {/* Latest News */}
         <section className="w-full mb-8">
-          <div className="bg-[#f3f4f6] rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
+          <div className="bg-[#f3f4f6] shadow-lg p-6 border border-[#e5e7eb]">
             <h2 className="text-xl font-semibold text-[#1D428A] mb-2 flex items-center gap-2"><FaCalendarAlt /> Latest News</h2>
             <ul className="space-y-2">
               <li className="bg-white rounded-lg p-3 shadow flex justify-between items-center">
@@ -125,53 +138,57 @@ export default function Home() {
         </section>
         {/* Contact Info */}
         <section className="w-full mb-8">
-          <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
+          <div className="bg-white shadow-lg p-6 border border-[#e5e7eb] rounded-lg">
             <h2 className="text-xl font-semibold text-[#1D428A] mb-1 flex items-center gap-2"><FaEnvelope /> Contact & Address</h2>
-            <div className="text-[#0A2342]">
-              Kent State University CAE<br />
-              1400 Lefton Esplanade, Kent, OH 44242<br />
-              Email: cae@kent.edu<br />
-              Phone: (330) 672-2892
-            </div>
+            <address className="not-italic text-[#0A2342]">Kent State University CAE<br />1400 Lefton Esplanade, Kent, OH 44242<br />Email: <a href="mailto:cae@kent.edu" className="text-primary underline">cae@kent.edu</a><br />Phone: <a href="tel:+13306722892" className="text-primary underline">(330) 672-2892</a></address>
           </div>
         </section>
         {/* Submission Form */}
         <section className="w-full mb-8">
-          <div className="bg-[#f3f4f6] rounded-2xl shadow-lg p-6 border border-[#e5e7eb]">
+          <div className="bg-[#f3f4f6] shadow-lg p-6 border border-[#e5e7eb] rounded-lg">
             <h2 className="text-xl font-semibold text-[#1D428A] mb-1 flex items-center gap-2"><FaEnvelope /> Student/Visitor Submission</h2>
-            <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+            <form className="flex flex-col gap-4" onSubmit={handleSubmit} aria-label="Contact form">
+              <label htmlFor="home-name" className="text-sm">Your name</label>
               <input
+                id="home-name"
                 type="text"
                 name="name"
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Your Name"
                 required
-                className="border rounded-lg p-2"
+                className="border p-2"
               />
+              <label htmlFor="home-email" className="text-sm">Your email</label>
               <input
+                id="home-email"
                 type="email"
                 name="email"
                 value={form.email}
                 onChange={handleChange}
                 placeholder="Your Email"
                 required
-                className="border rounded-lg p-2"
+                className="border p-2"
               />
+              <label htmlFor="home-message" className="text-sm">Message</label>
               <textarea
+                id="home-message"
                 name="message"
                 value={form.message}
                 onChange={handleChange}
                 placeholder="Message / Interest / RSVP"
                 required
-                className="border rounded-lg p-2"
+                className="border p-2"
               />
-              <button
-                type="submit"
-                className="bg-linear-to-r from-[#FFD100] to-[#1D428A] text-black font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"
-              >
-                <FaEnvelope /> Submit
-              </button>
+              <div className="flex gap-3">
+                <button
+                  type="submit"
+                  className="bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#FFD100] hover:text-[#18325a] border border-[#18325a] transition-transform flex items-center gap-2"
+                >
+                  <FaEnvelope /> Submit
+                </button>
+                <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-[#1D428A] font-semibold py-2 px-4 rounded-lg shadow border">More contact options</Link>
+              </div>
               {submitted && (
                 <div className="text-green-600 font-semibold">Thank you for your submission!</div>
               )}
@@ -180,8 +197,8 @@ export default function Home() {
         </section>
         {/* Extra Navigation Buttons */}
         <section className="w-full flex gap-4 mt-4">
-          <a href="/contact" className="bg-linear-to-r from-[#FFD100] to-[#1D428A] text-black font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaEnvelope /> Contact</a>
-          <a href="/admin/submissions" className="bg-linear-to-r from-[#0A2342] to-[#FFD100] text-white font-bold py-2 px-4 rounded-xl shadow hover:scale-105 transition-transform flex items-center gap-2"><FaCheckCircle /> Admin (Secret)</a>
+          <Link href="/contact" className="bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#FFD100] hover:text-[#18325a] transition-transform flex items-center gap-2 border border-[#18325a]"><FaEnvelope /> Contact</Link>
+          <Link href="/admin/submissions" className="bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-[#FFD100] hover:text-[#18325a] transition-transform flex items-center gap-2 border border-[#18325a]"><FaCheckCircle /> Admin (Secret)</Link>
         </section>
       </main>
     </div>

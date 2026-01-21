@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Rocket Club",
+    "slug": "rocket-club",
+    "facts": ["Founded 2018", "Competes in NASA Student Launch"],
+    "description": "A club for students interested in rocketry, engineering, and aerospace competitions.",
+    "calendar": [
+      { "date": "2026-02-10", "event": "Weekly Meeting" },
+      { "date": "2026-03-05", "event": "Rocket Launch Prep" }
+    ],
+    "members": ["Ethan Boicey", "Jane Smith", "John Doe"],
+    "contact": "rocket@kent.edu",
+    "website": "https://rocketclub.kent.edu"
+  },
+  {
+    "name": "Robotics Club",
+    "slug": "robotics-club",
+    "facts": ["Founded 2015", "Hosts annual RoboFest"],
+    "description": "A club for students passionate about robotics, automation, and programming.",
+    "calendar": [
+      { "date": "2026-02-15", "event": "Intro to Robotics" },
+      { "date": "2026-03-12", "event": "RoboFest Planning" }
+    ],
+    "members": ["Alex Lee", "Sam Patel", "Morgan Yu"],
+    "contact": "robotics@kent.edu",
+    "website": "https://robotics.kent.edu"
+  },
+  {
+    "name": "AIAA (Aerospace Club)",
+    "slug": "aiaa",
+    "facts": ["National student chapter", "Aerospace competitions"],
+    "description": "A club for students interested in aerospace engineering, research, and industry networking.",
+    "calendar": [
+      { "date": "2026-02-20", "event": "AIAA Speaker Series" },
+      { "date": "2026-03-18", "event": "Design Challenge Kickoff" }
+    ],
+    "members": ["Taylor Brooks", "Jordan Kim", "Priya Singh"],
+    "contact": "aiaa@kent.edu",
+    "website": "https://aiaa.kent.edu"
+  },
+  {
+    "name": "SAE (Society of Automotive Engineers)",
+    "slug": "sae",
+    "facts": ["Formula SAE team", "Hands-on automotive projects"],
+    "description": "A club for students interested in automotive engineering, design, and racing competitions.",
+    "calendar": [
+      { "date": "2026-02-22", "event": "SAE Team Meeting" },
+      { "date": "2026-03-25", "event": "Car Build Day" }
+    ],
+    "members": ["Chris Evans", "Maria Lopez", "Ben Carter"],
+    "contact": "sae@kent.edu",
+    "website": "https://sae.kent.edu"
+  },
+  {
+    "name": "Women in Engineering",
+    "slug": "women-in-engineering",
+    "facts": ["Mentorship programs", "STEM outreach"],
+    "description": "A club supporting women in engineering through mentorship, networking, and outreach.",
+    "calendar": [
+      { "date": "2026-02-28", "event": "Mentor Match Night" },
+      { "date": "2026-03-30", "event": "STEM Outreach Event" }
+    ],
+    "members": ["Emily Chen", "Rachel Adams", "Fatima Noor"],
+    "contact": "wie@kent.edu",
+    "website": "https://wie.kent.edu"
+  },
+  {
+    "name": "Drone Club",
+    "slug": "drone-club",
+    "facts": ["FPV racing", "Aerial photography"],
+    "description": "A club for students interested in drones, aerial robotics, and FPV racing.",
+    "calendar": [
+      { "date": "2026-03-01", "event": "FPV Race Practice" },
+      { "date": "2026-03-20", "event": "Aerial Photography Workshop" }
+    ],
+    "members": ["Liam Turner", "Sophia Park", "Omar Ali"],
+    "contact": "drone@kent.edu",
+    "website": "https://drone.kent.edu"
+  }
+]

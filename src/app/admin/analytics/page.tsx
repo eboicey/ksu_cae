@@ -172,13 +172,13 @@ export default function AnalyticsDashboard() {
       <div className="flex gap-4 mt-8">
         <button
           onClick={exportCSV}
-          className="bg-[#FFD100] text-black font-bold py-2 px-4 rounded shadow"
+          className="bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow border border-[#18325a] hover:bg-[#0A2342] hover:text-white transition-colors duration-200"
         >
           Export to CSV
         </button>
         <button
           onClick={generateReport}
-          className="bg-[#1D428A] text-white font-bold py-2 px-4 rounded shadow"
+          className="bg-[#18325a] text-white font-bold py-2 px-4 rounded-lg shadow border border-[#18325a] hover:bg-[#0A2342] hover:text-white transition-colors duration-200"
         >
           Generate Monthly Report
         </button>

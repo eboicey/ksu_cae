@@ -2,7 +2,125 @@
   "title": "Faculty & Staff",
   "description": "Meet our distinguished faculty and staff members.",
   "faculty": [
-    { "name": "Dr. Jane Smith", "role": "Professor of Aeronautics" },
-    { "name": "Dr. John Doe", "role": "Associate Professor of Mechatronics" }
+    {
+      "slug": "jane-smith",
+      "name": "Dr. Jane Smith",
+      "role": "Professor of Aeronautics",
+      "bio": "Dr. Smith researches advanced propulsion systems and mentors student rocketry projects.",
+      "yearsAtCollege": 12,
+      "degree": "Ph.D., Aerospace Engineering, MIT",
+      "publications": ["Smith et al., 2022 — Hybrid Propulsion Advances", "Smith & Lee, 2019 — Rocket Stability"],
+      "email": "jane.smith@ksu.edu",
+      "phone": "(330) 555-0101",
+      "photo": null
+    },
+    {
+      "slug": "john-doe",
+      "name": "Dr. John Doe",
+      "role": "Associate Professor of Mechatronics",
+      "bio": "Focuses on robotics and automation with applied industry collaborations.",
+      "yearsAtCollege": 8,
+      "degree": "Ph.D., Mechanical Engineering, Georgia Tech",
+      "publications": ["Doe et al., 2021 — Modular Robotics", "Doe & Chen, 2018 — Control Systems"],
+      "email": "john.doe@ksu.edu",
+      "phone": "(330) 555-0102",
+      "photo": null
+    },
+    {
+      "slug": "emily-chen",
+      "name": "Dr. Emily Chen",
+      "role": "Assistant Professor of Materials",
+      "bio": "Researches advanced composites for lightweight structures.",
+      "yearsAtCollege": 5,
+      "degree": "Ph.D., Materials Science, Stanford",
+      "publications": ["Chen et al., 2023 — Composite Interfaces"],
+      "email": "emily.chen@ksu.edu",
+      "phone": "(330) 555-0103",
+      "photo": null
+    },
+    {
+      "slug": "michael-lee",
+      "name": "Dr. Michael Lee",
+      "role": "Lecturer, Systems Engineering",
+      "bio": "Teaches systems modeling and supports capstone teams.",
+      "yearsAtCollege": 4,
+      "degree": "M.S., Systems Engineering, Case Western",
+      "publications": [],
+      "email": "michael.lee@ksu.edu",
+      "phone": "(330) 555-0104",
+      "photo": null
+    },
+    {
+      "slug": "sarah-patel",
+      "name": "Dr. Sarah Patel",
+      "role": "Director, Student Success",
+      "bio": "Leads advising and student success initiatives across the college.",
+      "yearsAtCollege": 7,
+      "degree": "M.Ed., Higher Education, Ohio State",
+      "publications": ["Patel, 2020 — Advising Strategies"],
+      "email": "sarah.patel@ksu.edu",
+      "phone": "(330) 555-0105",
+      "photo": null
+    },
+    {
+      "slug": "david-ortiz",
+      "name": "David Ortiz",
+      "role": "Lab Manager, Aerodynamics Lab",
+      "bio": "Oversees lab operations, safety, and student training.",
+      "yearsAtCollege": 10,
+      "degree": "B.S., Mechanical Engineering, KSU",
+      "publications": [],
+      "email": "david.ortiz@ksu.edu",
+      "phone": "(330) 555-0106",
+      "photo": null
+    },
+    {
+      "slug": "laura-nguyen",
+      "name": "Laura Nguyen",
+      "role": "Administrative Coordinator",
+      "bio": "Coordinates events, outreach, and departmental communications.",
+      "yearsAtCollege": 3,
+      "degree": "B.A., Communications, KSU",
+      "publications": [],
+      "email": "laura.nguyen@ksu.edu",
+      "phone": "(330) 555-0107",
+      "photo": null
+    },
+    {
+      "slug": "kevin-brown",
+      "name": "Dr. Kevin Brown",
+      "role": "Research Scientist",
+      "bio": "Works on autonomous systems and sensor fusion.",
+      "yearsAtCollege": 6,
+      "degree": "Ph.D., Electrical Engineering, Purdue",
+      "publications": ["Brown et al., 2022 — Sensor Fusion Techniques"],
+      "email": "kevin.brown@ksu.edu",
+      "phone": "(330) 555-0108",
+      "photo": null
+    },
+    {
+      "slug": "aisha-rahman",
+      "name": "Dr. Aisha Rahman",
+      "role": "Associate Professor of Environmental Engineering",
+      "bio": "Studies sustainable materials and green infrastructure.",
+      "yearsAtCollege": 9,
+      "degree": "Ph.D., Civil & Environmental Engineering, UC Berkeley",
+      "publications": ["Rahman et al., 2021 — Sustainable Composites"],
+      "email": "aisha.rahman@ksu.edu",
+      "phone": "(330) 555-0109",
+      "photo": null
+    },
+    {
+      "slug": "marcus-wright",
+      "name": "Marcus Wright",
+      "role": "Technical Instructor",
+      "bio": "Supports fabrication labs and student maker projects.",
+      "yearsAtCollege": 2,
+      "degree": "A.A.S., Industrial Technology, Local Community College",
+      "publications": [],
+      "email": "marcus.wright@ksu.edu",
+      "phone": "(330) 555-0110",
+      "photo": null
+    }
   ]
 }
